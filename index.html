@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Learning</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.js",
+          "stlloader":  "https://cdn.jsdelivr.net/npm/three/examples/jsm/loaders/STLLoader.js",
+          "orbitcontrols": "https://cdn.jsdelivr.net/npm/three/examples/jsm/controls/OrbitControls.js",
+          "sceneSetup": "/scripts/sceneSetup.js",
+          "cameraSetup": "/scripts/cameraSetup.js",
+          "controlsSetup": "/scripts/controlsSetup.js",
+          "lightingSetup": "/scripts/lightingSetup.js",
+          "loadGeometrySetup": "/scripts/loadGeometrySetup.js",
+          "raycaster": "/scripts/raycaster.js",
+          "windowResizeHandler": "/scripts/windowResizeHandler.js",
+          "render": "/scripts/render.js",
+          "planeSetup": "/scripts/planeSetup.js",
+          "dragDropUtility": "/scripts/dragDropUtility.js",
+          "stlReaderWorker": "/scripts/stlReaderWorker.js",
+          "stlParserWorker": "/scripts/stlParserWorker.js"
+        }
+      }
+    </script>
+    <script type="module" src="/scripts/main.js" defer></script>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <div id="drop-area">
+    <p>Drag and drop your STL file here</p>
+</div>
+ <div class="ui-container">
+  <label>
+      <input type="checkbox" id="wireframe-toggle" />
+      Enable Plane
+  </label>
+</div>
+<div id="loader" style="display: none;">
+  Loading STL file...
+</div>
+<div id="error-message" style="display: none;" class="error">
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/* main.css */
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+#drop-area {
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ui-container {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+.ui-container input {
+    cursor: pointer; /* Change cursor to pointer for better UX */
+}
+
+.ui-container label {
+    cursor: pointer; /* Change cursor to pointer for better UX */
+}
+
+.loader {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    background: #de3500;
+    color: #fff;
+    transform: perspective(200px) rotateX(65deg) rotate(45deg); /* Added perspective for 3D effect */
+    animation: layers1 1s linear infinite alternate;
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.7);
+    animation: layerTr 1s linear infinite alternate;
+}
+
+@keyframes layers1 {
+    0% { box-shadow: 0px 0px 0 0px; }
+    100% { box-shadow: 20px 20px 0 4px rgba(0, 0, 0, 0.5); } /* Adjusted to positive spread for visibility */
+}
+
+@keyframes layerTr {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-10px, -10px) scale(1.2); } /* Added slight scale change for subtle effect */
+}

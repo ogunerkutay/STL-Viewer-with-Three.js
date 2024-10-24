@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Open index.html",
+            "file": "c:\\Users\\oerkutay\\OneDrive - GUROK TURIZM MADENCILIK AS\\Desktop\\deneme\\index.html",
+            "url": "http://localhost:5500", // URL served by Live Server
+            "webRoot": "${workspaceFolder}", // Adjust if necessary
+            "sourceMaps": true // Enable sourcemaps for better debugging
+        }
+    ]
+}
